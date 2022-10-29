@@ -1,20 +1,35 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Servicio Metereologico Nacional</title>
 </head>
 <body>
+
 	<h1>Servicio Metereologíco Nacional</h1>
 	<h3>Registrar datos del clima</h3>
+	
 	<label>Ciudad</label>
+	
 	<select>
 	<option>Ciudad</option>
 	</select></br>
+	
 	<label for="temperatura">Temperatura</label>
-	<input type="number" id="temperatura" name="temperatura"></br>
+	<input type="number" id="temperatura" name="temperatura" th:value="*{temperatura}"></br>
+	
 	<label for="eClima">Estado Clima</label>
-	<input type="number" id="eClima" name="eClima"></br>
+	<input type="number" id="eClima" name="eClima" th:value="*{eClima}"></br>
+	
 	<label for="humedad">humedad</label>
-	<input type="number" id="humedad" name="humedad"></br>
+	<input type="number" id="humedad" name="humedad" th:value="*{humedad}"></br>
+	
 	<label for="fecha">fecha</label>
-	<input type="number" id="fecha" name="fecha">
+	<input type="number" id="fecha" name="fecha" th:value="*{fecha}">
+	
+	
+	
+    
+    
+   
+</form>
 </body>
