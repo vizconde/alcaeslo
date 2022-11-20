@@ -4,9 +4,9 @@ import Pojo.Ciudad;
 public class CiudadForm {
 	
 	private Long id;
-
-	private String nombre;
 	
+	private String nombre;
+
 	private Long idProvincia;
 	
 	public CiudadForm() {
