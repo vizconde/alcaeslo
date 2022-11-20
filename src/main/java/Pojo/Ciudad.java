@@ -1,16 +1,17 @@
-package Pojos;
+package Pojo;
 
 public class Ciudad {
 	
- private int id;
+ private long id;
  private String nombre;
+ private Provincia provincia;
  
  
- public int getId() {
+ public long getId() {
 	 return id;
  }
  
- public void setId(int id) {
+ public void setId(long id) {
 	 this.id = id;
  }
  
@@ -20,6 +21,14 @@ public class Ciudad {
  
  public void setNombre(String nombre) {
 	 this.nombre = nombre;
+ }
+ 
+ public Provincia getProvincia() {
+	 return provincia;
+ }
+ 
+ public void setProvincia(Provincia provincia) {
+	 this.provincia = provincia;
  }
  
 }

@@ -1,4 +1,4 @@
-package Pojos;
+package Pojo;
 
 public class Pronostico {
 	private int temperatura; // hay que validar que sea mayor a 0 

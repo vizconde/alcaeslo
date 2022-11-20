@@ -1,14 +1,14 @@
-package Pojos;
+package Pojo;
 
 public class Provincia {
-	private int idProvincia;
+	private long idProvincia;
 	private String nombreProvincia;
 	
-	public int getIdProvincia() {
+	public long getIdProvincia() {
 		return idProvincia;
 	}
 	
-	public void setIdProvincia (int idProvincia) {
+	public void setIdProvincia (long idProvincia) {
 		this.idProvincia = idProvincia;
 	}
 	
