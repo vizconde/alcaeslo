@@ -19,6 +19,14 @@ public class CiudadForm {
 		this.idProvincia=c.getProvincia().getIdProvincia();
 		
 	}
+	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -32,5 +40,13 @@ public class CiudadForm {
 	}
 	public void setIdProvincia(Long idProvincia) {
 		this.idProvincia = idProvincia;
+	}
+	
+	public Ciudad toPojo()
+	{
+		Ciudad c = new Ciudad();
+		c.setId(this.id);
+		c.setNombre(this.getNombre());
+		return c;
 	}
 }
