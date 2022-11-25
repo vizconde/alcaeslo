@@ -1,16 +1,16 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title><span th:text="#{ciudad.buscar.titulo}"></span></title>
+    <title>ciudad buscar</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" th:href="@{/css/main.css}"/>
 </head>
 <body>
 
 	<div class="starter-template">
-        <h1><span  th:text="#{empresa}" /></h1>
+        <h1>Servicio metereologico nacional</h1>
         <h2>
-            <span th:text="#{ciudad.buscar.titulo}"></span>
+            <span>Ciudad Buscar</span>
         </h2>
     </div>
     
@@ -19,14 +19,14 @@
 	<table border="1" style="align-self: center;">
 		
         <tr>
-            <td><label th:text="#{ciudad.nombre}" /></td>
+            <td>Nombre</td>
             <td><input type="text" th:field="*{nombre}" /></td>
             
         </tr>
        
         
          <tr>
-            <td><label th:text="#{ciudad.provincia}" /></td>
+            <td>Provincia</td>
             <td>
 		        <select th:field="*{provinciaSeleccionada}">
 				  <option th:value="null" text="Seleccione una opción"></option>
@@ -36,6 +36,32 @@
 				</select>
 			</td>
 		</tr>
+		
+		<tr>
+            <td>Temperatura</td>
+            <td><input type="number" th:field="*{temperatura}" /></td>
+            
+        </tr>
+		 <tr>
+            <td>Estado clima</td>
+            <td>
+		        <select th:field="*{estadoSeleccionado}">
+				  <option th:value="null" text="Seleccione una opción"></option>
+				  
+				  <!--CAMBIAR POR LO DEL ESTADO  -->
+				  <option th:each="p : ${allProvincias}" 
+				          th:value="${p.id}" 
+				          th:text="${p.nombre}"></option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+            <td>Humedad</td>
+            <td><input type="number" th:field="*{humedad}" /></td>
+            
+        </tr>
+		
+		
   </table>
   <table class="botones">
 
