@@ -1,7 +1,12 @@
 package Pojo;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
+@Entity
 public class Provincia {
+	@Id
 	private long idProvincia;
+	
 	private String nombreProvincia;
 	
 	public long getIdProvincia() {
