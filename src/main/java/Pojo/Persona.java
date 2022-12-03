@@ -4,6 +4,8 @@ package Pojo;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
@@ -11,13 +13,13 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Persona {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//indica al mapeador que lo genera de manera autonumerica
 	private Long dni;
-	
 	private String nombre;
-	
 	private String apellido;
-	
 	private Date fechaNacimiento;
+	private Boolean recibirAlertas;
+	private String correo;
 	
 	@ManyToOne
 	private Ciudad ciudad;
@@ -52,6 +54,18 @@ public class Persona {
 	}
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
+	}
+	public Boolean getRecibirAlertas() {
+		return recibirAlertas;
+	}
+	public void setRecibirAlertas(Boolean recibirAlertas) {
+		this.recibirAlertas = recibirAlertas;
+	}
+	public String getCorreo() {
+		return correo;
+	}
+	public void setCorreo(String correo) {
+		this.correo = correo;
 	}
 	
 }
