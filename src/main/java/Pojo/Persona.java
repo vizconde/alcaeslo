@@ -4,16 +4,12 @@ package Pojo;
 import java.util.Date;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 @Entity
 public class Persona {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)//indica al mapeador que lo genera de manera autonumerica
 	private Long dni;
 	private String nombre;
 	private String apellido;
