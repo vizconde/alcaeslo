@@ -80,7 +80,7 @@ public class EventoExtremoForm {
 		ee.setFecha(this.getFecha());
 		return ee;
 	}
-	// falta validacion fecha actual y posterior
+
 	
 	}
 
